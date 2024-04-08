@@ -1,0 +1,41 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    color: white;
+}
+  .basic{
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-header{
+    max-height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: rgb(65, 87, 65);
+  }
+  .selectable{
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid white;
+  }
+  .score, .mode{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
