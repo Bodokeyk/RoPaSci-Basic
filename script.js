@@ -2,9 +2,6 @@ const modeSelector = document.querySelector("#modeButton");
 const instruccionsDiv = document.querySelector(".instructions");
 const playerScore = document.querySelector(".player-score");
 const rivalScore = document.querySelector(".rival-score");
-const rockButton = document.querySelector(".rock");
-const paperButton = document.querySelector(".paper");
-const scissorsButton = document.querySelector(".scissors");
 const buttonsContainer = document.querySelector(".main-container")
 let modeNumber = true;
 let roundsCount = 0;
@@ -12,7 +9,6 @@ let resultText;
 
 /* Listener for Mode selection, reset scores and also fixes the div */
 modeSelector.addEventListener("click", ()=> {
-let buttonContent = modeSelector.textContent;
 if (modeNumber == true){
   modeSelector.textContent = "5 Rounds";
   modeNumber = false;
@@ -56,6 +52,7 @@ function passElection (text) {
  also pass in the choice done */
 buttonsContainer.addEventListener("click",(event) =>{
   let buttonSelected = event.target.id;
+  console.log(buttonSelected)
   if(modeNumber == true){
   singleGame(buttonSelected, getComputerChoice())
   }else{
